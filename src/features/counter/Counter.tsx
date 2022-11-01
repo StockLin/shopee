@@ -10,6 +10,7 @@ import {
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
+import DefaultLayout from '../../layouts/DefaultLayout';
 
 export function Counter() {
   const count = useAppSelector(selectCount);
@@ -19,7 +20,7 @@ export function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-    <div>
+    <DefaultLayout>
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -63,6 +64,6 @@ export function Counter() {
           Add If Odd
         </button>
       </div>
-    </div>
+    </DefaultLayout>
   );
 }
