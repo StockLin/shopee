@@ -1,20 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Normalize } from 'styled-normalize';
+import 'antd/dist/antd.min.css';
 import { Counter } from './features/counter/Counter';
 
-function App() {
+const  App : React.FC = () => {
   return (
-    <React.Fragment>
-      <Normalize />
-      <div className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path='/counter' element={<Counter />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </React.Fragment>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Counter />} />
+          <Route path='/account/register' element={<div>Register Page</div>} />
+          <Route path='/account/login' element={<div>Login Page</div>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

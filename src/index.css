@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #ee4d2d;
+  --sm-font-size: 12px;
+  --md-font-size: 14px;
+  --lg-font-size: 20px;
+}
+
+.container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}

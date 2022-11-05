@@ -1,0 +1,83 @@
+@import '../../../index.css';
+
+.header {
+  border: 1px solid #000;
+  width: 100%;
+  height: 128px;
+  background-color: var(--primary-color);
+}
+
+.header.fixed {
+  position: fixed;
+}
+
+.navbar {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: var(--md-font-size);
+}
+
+.nav {
+  border: 1px solid 000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 4px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.nav-item:hover {
+  opacity: 0.8;
+}
+
+.nav.right .nav-item {
+  margin-right: 8px;
+}
+
+.nav-item--icons_group {
+  font-size: 18px;
+}
+
+.nav-item--icons_group i {
+  margin-right: 8px;
+  transition: all .3s;
+}
+
+.nav-item--icons_group i:hover {
+  opacity: 0.8;
+}
+
+.translate-popover.ant-popover-inner-content {
+  padding: 0;
+}
+
+.translate {
+  display: block;
+
+  margin: 0;
+}
+
+.translate-item {
+  /* padding: 4px 8px; */
+  /* border: 1px solid #000; */
+  transition: all 0.3s;
+}
+
+.translate-item:hover {
+  color: var(--primary-color);
+}
+
+
+/* .container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
