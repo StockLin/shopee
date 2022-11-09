@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './DefaultLayout.module.css';
+import Header from '../commons/components/header/Header';
+import Footer from '../commons/components/footer/Footer';
 
-import Footer from '../features/commons/footer/Footer';
-import Header from '../features/commons/header/Header';
 
 interface IProps {
   fixHeader?: boolean,

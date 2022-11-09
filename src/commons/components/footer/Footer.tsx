@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
-import { Divider } from 'antd';
 import { FacebookFilled, InstagramFilled, LinkedinFilled, WechatFilled, ShoppingOutlined } from '@ant-design/icons';
 
 interface IFooterColumn {
@@ -42,12 +41,6 @@ const aboutUsFooterColumns = [
 ];
 
 const Footer : React.FC = () => {
-  const [columns, setColumns] = useState<IFooterColumn[]>([
-    { name: '幫助中心', url: '/' },
-    { name: '蝦皮商城', url: '/' },
-    { name: '付款方式', url: '/' }
-  ])
-
   const renderFooterColumns = (title:string='', columns:IFooterColumn[]=[]) => {
     return (
       <div className={styles["footer-column"]}>
