@@ -1,0 +1,43 @@
+.banner-section {
+  width: 100%;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-section {
+    padding-top: 30px;
+  }  
+}
+
+.banner {
+  /* border: 1px solid #333; */
+  display: flex;
+}
+
+.banner-left {
+  width: 100%;
+} 
+
+.banner-right {
+  width: 100%;
+}
+
+.banner-right .banner_right-item {
+  height: 50%;
+}
+
+.banner-right .banner_right-item:last-child {
+  padding-top: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-left {
+    width: 65%;
+  }
+
+  .banner-right {
+    width: 35%;
+    margin-left: 4px;
+  }
+}
+
