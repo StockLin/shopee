@@ -16,7 +16,10 @@ const DefaultLayout : React.FC<IProps> = ({ fixHeader=false, children }) => {
       <Header fixed={fixHeader} />
 
       { fixHeader && <div className={styles['clearfix']} /> }
-      { children }
+
+      <div className={styles['content']}>
+        { children }
+      </div>
 
       <Footer />
     </React.Fragment>
