@@ -91,3 +91,10 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+/* main */
+
+/* banner-image */
+.banner-image {
+  margin-top: 20px;
+}

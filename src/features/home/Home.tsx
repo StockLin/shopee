@@ -121,6 +121,7 @@ const Home : React.FC = () => {
             </div>
           </div>
 
+          {/* banner-list */}
           <div className={styles['banner-list']}>
             {
               initialBannerListItems.map(item => (
@@ -138,9 +139,11 @@ const Home : React.FC = () => {
 
       {/* main */}
       <div className='container'>
-        <div>simeple-banner-image</div>
-        <div>Category List</div>
-        <div>Product List</div>
+        <div className={styles['banner-image']}>
+          <img src="https://cf.shopee.tw/file/3414a0922616d41edc3ec767fd73b27f" alt="" />
+        </div>
+        <div className='hero'>Category List</div>
+        <div className='hero'>Product List</div>
       </div>
     </DefaultLayout>
   )
