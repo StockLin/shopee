@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DefaultLayout.module.css';
-import Header from '../commons/components/header/Header';
-import Footer from '../commons/components/footer/Footer';
+import Header from '../commons/components/Header/Header';
+import Footer from '../commons/components/Footer/Footer';
 
 
 interface IProps {
