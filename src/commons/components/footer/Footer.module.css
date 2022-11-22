@@ -3,6 +3,8 @@
   width: 100%;
   /* min-height: ; */
   background-color: #fbfbfb;
+
+  border-top: 4px solid var(--primary-color);
 }
 
 .footer-section {

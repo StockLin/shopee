@@ -4,6 +4,8 @@ import DefaultLayout from '../../layouts/DefaultLayout'
 import Carousel from '../../commons/components/Carousel/Carousel';
 import { ICarousel } from '../../commons/components/Carousel/carousel.type';
 import { Link } from 'react-router-dom';
+import ProductCollection from '../../commons/components/product/ProductContainer/ProductCollection';
+
 
 const initialCarouselData = [
   {
@@ -143,7 +145,10 @@ const Home : React.FC = () => {
           <img src="https://cf.shopee.tw/file/3414a0922616d41edc3ec767fd73b27f" alt="" />
         </div>
         <div className='hero'>Category List</div>
-        <div className='hero'>Product List</div>
+        <div className='hero'>
+          <div className={styles['content-header']}>每日新發現</div>
+          <ProductCollection />
+        </div>
       </div>
     </DefaultLayout>
   )

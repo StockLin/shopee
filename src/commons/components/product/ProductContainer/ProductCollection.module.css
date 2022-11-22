@@ -1,0 +1,24 @@
+.product-collection {
+  padding: 8px;
+}
+
+.product-more {
+  /* border: 1px solid #333; */
+  display: block;
+  width: 120px;
+  padding: 8px;
+  margin: 0 auto;
+  margin-top: 16px;
+  line-height: 24px;
+  text-align: center;
+  
+  color: #555;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+
+  transition: all .3s;
+}
+
+.product-more:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
