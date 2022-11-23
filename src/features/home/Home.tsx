@@ -5,6 +5,8 @@ import Carousel from '../../commons/components/Carousel/Carousel';
 import { ICarousel } from '../../commons/components/Carousel/carousel.type';
 import { Link } from 'react-router-dom';
 import ProductCollection from '../../commons/components/product/ProductContainer/ProductCollection';
+import { IProduct } from '../../commons/components/product/ProductCard/ProductCard.type';
+
 
 
 const initialCarouselData = [
@@ -95,11 +97,42 @@ const initialBannerListItems = [
     url: "https://shopee.tw/campaigns"
   },
  
+];
+
+const initialProducts : IProduct[] = [
+  {
+    id: 1,
+    imageUrls: ['https://cf.shopee.tw/file/2443267b4da34a1090811f96e3c6465e_tn'],
+    description: '韓國工廠3d口罩 成人韓版3D立體口罩 防護口罩 防飛沫 KF94 白色口罩 面罩 防花妝 韓國口罩 網紅口罩 顯臉小',
+    price: 100,
+    sales: 125,
+    discount: 0.65,
+    rating: 25
+  },
+  {
+    id: 2,
+    imageUrls: ['https://cf.shopee.tw/file/49b789ed2032223c189f24bb4d40f21d_tn'],
+    description: '❥韓版格子短版毛衣〔3色〕❥秋冬女裝新款韓版INS韓系女裝 女裝毛衣 短版毛衣 格子 格紋 秋裝 圓領毛衣 長袖針織上衣',
+    price: 199,
+    sales: 487,
+    discount: 0,
+    rating: 120
+  },
+  {
+    id: 3,
+    imageUrls: ['https://cf.shopee.tw/file/49b789ed2032223c189f24bb4d40f21d_tn'],
+    description: '❥韓版格子短版毛衣',
+    price: 199,
+    sales: 487,
+    discount: 0.85,
+    rating: 120
+  },
 ]
 
 const Home : React.FC = () => {
   const carousels  : ICarousel[] = initialCarouselData;
   const bannerRights : ICarousel[] = initialBannerRightData;
+  const products : IProduct[] = initialProducts;
 
   return (
     <DefaultLayout>
@@ -147,7 +180,7 @@ const Home : React.FC = () => {
         <div className='hero'>Category List</div>
         <div className='hero'>
           <div className={styles['content-header']}>每日新發現</div>
-          <ProductCollection />
+          <ProductCollection products={products} />
         </div>
       </div>
     </DefaultLayout>

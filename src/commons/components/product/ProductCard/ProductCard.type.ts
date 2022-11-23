@@ -1,8 +1,9 @@
 export interface IProduct {
-  imageUrls?: string[],
+  id: number | string,
+  imageUrls: string[],
   description: string,
   price: number,
-  sales?: number | null // 
-  discount: number //折扣
+  sales?: number | null, // 已售出
+  discount: number, //折扣
   rating: number
 }

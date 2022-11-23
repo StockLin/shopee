@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './ProductCollection.module.css';
 import { Col, Row } from 'antd';
-import { IProduce } from 'immer/dist/internal';
 import ProductCard from '../ProductCard/ProductCard';
 import { Link } from 'react-router-dom';
+import { IProduct } from '../ProductCard/ProductCard.type';
 
 interface IProps {
-  products?: IProduce[],
+  products?: IProduct[],
   children?: React.ReactNode
 }
 
@@ -15,8 +15,8 @@ const ProductCollection : React.FC<IProps> = ({ products, children }) => {
     <div className={styles['product-collection']}>
       <Row gutter={[8, 8]}>
         {
-          Array.from(Array(10).keys()).map(value => (
-            <ProductCard key={value}/>
+          products?.map(product => (
+            <ProductCard key={product.id} product={product} />
           ))
         }
         <Col span={24}>
