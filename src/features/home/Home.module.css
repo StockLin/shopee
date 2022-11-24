@@ -49,6 +49,8 @@
   margin-top: 10px;
   justify-content: space-around;
   align-items: center;
+
+  overflow: scroll;
 }
 
 .banner-link {
@@ -65,22 +67,13 @@
   line-height: 24px;
   padding: 8px 0;
   text-align: center;
+
+  transition: all .3s;
 }
 
-/* .banner-link:hover .banner-item {
-  position: absolute;
-  top: -10px;
-} */
-
-/* .banner-item::after {
-  content: '';
-  display: block;
-  height: 0;
+.banner-link:hover .banner-item {
+  transform: translate(0, -4px);
 }
-
-.banner-item:hover.banner-item::after  {
-  height: 4px;
-} */
 
 .banner-item .banner-item_img {
   /* border: 1px solid red; */
