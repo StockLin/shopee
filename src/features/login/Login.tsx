@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './Login.module.css';
 import Footer from '../../commons/components/Footer/Footer';
 import { Button, Divider } from 'antd';
+import { CloseCircleOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const Login : React.FC = () => {
   const [formType, setFormType] = useState<'login' | 'register'>('login');
@@ -11,7 +13,16 @@ const Login : React.FC = () => {
     <div>
       <header>
         <div className='container'>
-          head
+          <div className={styles["login-header"]}>
+            <div className={styles["header-left"]}>
+              <Link to='/'>
+                <img className={styles['header-image']} src="/shopee-logo2.png" alt="logo" />
+              </Link>
+            </div>
+            <div className={styles["header-right"]}>
+              <a href="#!" target={'_blank'}>需要幫助?</a>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -23,7 +34,12 @@ const Login : React.FC = () => {
               <form className={styles['login-content__form']} action="">
                 {
                   errorMessage &&
-                  <div className="login-content__form--message">error message</div>
+                  <div className={styles["login-content__form--message"]}>
+                    <div className={styles.icon}>
+                      <CloseCircleOutlined />
+                    </div>
+                    { errorMessage }
+                  </div>
                 }
                 <input type="text" placeholder='電話號碼/使用者名稱/Email' />
                 <input type="password" placeholder='密碼' />
