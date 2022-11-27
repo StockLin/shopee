@@ -4,7 +4,7 @@ import DefaultLayout from '../../layouts/DefaultLayout'
 import Carousel from '../../commons/components/Carousel/Carousel';
 import { ICarousel } from '../../commons/components/Carousel/carousel.type';
 import { Link } from 'react-router-dom';
-import ProductCollection from '../../commons/components/product/ProductContainer/ProductCollection';
+import ProductCollection from '../../commons/components/product/ProductConllection/ProductCollection';
 import { IProduct } from '../../commons/components/product/ProductCard/ProductCard.type';
 
 
