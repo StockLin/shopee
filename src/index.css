@@ -29,3 +29,28 @@
 .hero {
   margin-top: 30px;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  /* overflow: hidden; */
+}
+
+.image-container::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.image-container .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
