@@ -1,11 +1,12 @@
 .product {
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 768px) {
- .product {
+  .product {
     flex-direction: row;
   }
 }
@@ -16,5 +17,123 @@
 }
 
 .product-content {
- flex: 3;
+  flex: 3;
+  border: 1px solid #333;
+  padding: 8px 16px;
+}
+
+.product-header {
+  /* border: 1px solid #333; */
+  display: block;
+  font-size: var(--lg-font-size);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/*  */
+.product-subheader {
+  /* border: 1px solid #333; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: var(--md-font-size);
+}
+
+.product-subheader__left {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-subheader__left .product-subheader__item {
+  padding: 0 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-subheader__left .product-subheader__item a {
+  color: #333;
+  margin-right: 8px;
+}
+
+.product-subheader__left .product-subheader__item > span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.product-subheader__left .product-subheader__item:first-child {
+  padding-left: 0;
+}
+
+.product-subheader__left .product-subheader__item:last-child {
+  border-right: none;
+}
+
+.product-rate .product-rate__value {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  line-height: 12px;
+  margin-right: 4px;
+}
+
+.product-rate .product-rate__ratebar {
+  color: var(--primary-color);
+  font-size: var(--md-font-size);
+}
+
+.product-subheader__right .product-subheader__item a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* pricing section */
+.product-price {
+  /* border: 1px solid #333; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 16px;
+  /* color: #fff; */
+  background-color: #FAFAFA;
+}
+
+.product-price p {
+  margin: 0;
+  margin-right: 8px;
+  font-size: var(--md-font-size);
+}
+
+.product-price .product-price__origin {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.product-price .product-price__current {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.product-price .product-price__discount {
+  display: none;
+  font-size: 8px;
+  font-weight: 600;
+  text-indent: 2px;
+  padding: 1px;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .product-price {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .product-price p {
+    margin-right:16px;
+    font-size: var(--md-font-size);
+    vertical-align: top;
+  }
+
+  .product-price .product-price__discount {
+    display: block;
+  }
 }
