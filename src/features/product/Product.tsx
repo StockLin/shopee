@@ -6,6 +6,7 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import { Divider, Input, Rate, Space } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import ProductImagePreviewer from "../../commons/components/product/ProductImagePreviewer/ProductImagePreviewer";
+import Tag from "../../commons/components/Tag/Tag";
 
 const initialImageUrls = [
   "https://cf.shopee.tw/file/2443267b4da34a1090811f96e3c6465e_tn",
@@ -81,23 +82,58 @@ const Product: React.FC = () => {
               <p className={styles["product-price__discount"]}>4.2 折</p>
             </div>
 
-            <div className={styles["product-coupons"]}></div>
-
-            <div className={styles["product-promotion"]}></div>
-
-            <div className={styles["product-shipment"]}></div>
-
-            <div className={styles["product-spec-collection"]}>
-              <div className={styles["product-spec"]}>
-                <div className={styles["product-spec__title"]}>顏色</div>
-                <div className={styles["product-spec__item"]}>
-                  <div className={styles["tag"]}>TAG1</div>
-                  <div className={styles["tag"]}>TAG1</div>
-                  <div className={styles["tag"]}>TAG1</div>
+            <div className={`${styles["product-subcontent"]}`}>
+              <div className={`flex ${styles["product-coupons"]}`}>
+                <div className={`${styles["product-subcontent__title"]}`}>賣場優惠券</div>
+                <div className={`${styles["product-subcontent__content"]}`}>
+                  <Tag title="現折$20" color="#EE4D2C" backgroundColor="#FCEDEE" />
+                  <Tag title="現折$20" color="#EE4D2C" backgroundColor="#FCEDEE" />
+                  <Tag title="現折$20" color="#EE4D2C" backgroundColor="#FCEDEE" />
                 </div>
-                <div className={styles["product-spec__number"]}>
-                  <Input />
-                  還剩186037件
+              </div>
+
+              <div className={`flex ${styles["product-promotion"]}`}>
+                <div className={`${styles["product-subcontent__title"]}`}>促銷組合</div>
+                <div className={`${styles["product-subcontent__content"]}`}>
+                  <Tag title="100件折 NT$20" color="#EE4D2C" border="1px solid #EE4D2C" />
+                </div>
+              </div>
+
+              <div className={`flex ${styles["product-shipment"]}`}>
+                <div className={`${styles["product-subcontent__title"]}`}>運送</div>
+                <div className={`${styles["product-subcontent__content"]}`}>
+                  <div className={styles["product-shipment__item"]} style={{ color: '#EE4D2C' }}>
+                    <i className="fa-solid fa-calendar-plus"></i> 較長備貨(出貨天數6 天)
+                  </div>
+                  {/* <div className={styles["product-shipment__item"]}>免運費</div> */}
+                  <div className={styles["product-shipment__item"]}>
+                    <div className={`${styles["product-shipment__subitem"]} ${styles["product-shipment__method"]}`}>
+                      <span><i className="fa-solid fa-truck"></i> 運送到</span>
+                      <div>中正區, 臺北市</div>
+                    </div>
+                    <div className={`${styles["product-shipment__subitem"]} ${styles["product-shipment__price"]}`}>
+                      <span>運費</span>
+                      <div>$39-$60</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles["product-spec-collection"]}>
+                <div className={`flex ${styles["product-spec"]}`}>
+                  <div className={styles["product-subcontent__title"]}>顏色</div>
+                  <div className={`flex ${styles["product-subcontent__content"]}`}>
+                    <div className={styles["tag"]}>TAG1</div>
+                    <div className={styles["tag"]}>TAG1</div>
+                    <div className={styles["tag"]}>TAG1</div>
+                  </div>
+                </div>
+                <div className={`flex ${styles["product-spec__number"]}`}>
+                  <div className={`${styles["product-subcontent__title"]}`}>數量</div>
+                  <div className={`flex ${styles["product-subcontent__content"]}`}>
+                    <Input />
+                    還剩186037件
+                  </div>
                 </div>
               </div>
             </div>

@@ -137,3 +137,55 @@
     display: block;
   }
 }
+
+.product-subcontent {
+  border: 1px solid #333;
+}
+
+.product-subcontent__title {
+  border: 1px solid #333;
+  width: 110px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 4px;
+}
+
+.product-subcontent__content {
+  /* border: 1px solid red; */
+}
+
+@media screen and (min-width: 768px) {
+  .product-subcontent__title {
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.product-coupons .product-subcontent__content,
+.product-promotion .product-subcontent__content,
+.product-spec .product-subcontent__content,
+.product-coupons .product-subcontent__content {
+  display: flex;
+}
+
+.product-shipment {
+  display: flex;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.product-shipment .product-shipment__item {
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-shipment .product-shipment__subitem {
+    display: flex;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 4px;
+  }
+
+  .product-shipment .product-shipment__subitem span {
+    margin-right: 10px;
+    width: 110px;
+  }
+}
