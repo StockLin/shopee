@@ -154,6 +154,15 @@ const Product: React.FC = () => {
                   </div>
                 </div>
               </div>
+
+              <div className={`${styles["product-actions"]}`}>
+                <div className={`${styles["btn"]} ${styles['btn-add-cart']}`}>
+                  <i className="fa-solid fa-cart-plus"></i> 加入購物車
+                </div>
+                <div className={`${styles["btn"]} ${styles['btn-buy-now']}`}>
+                  直接購買
+                </div>
+              </div>
             </div>
           </div>
         </div>
