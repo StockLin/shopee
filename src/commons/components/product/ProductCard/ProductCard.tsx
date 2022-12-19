@@ -8,7 +8,7 @@ interface IProps {
   product: IProduct
 }
 
-const ProductCard : React.FC<IProps> = ({ product }) => {
+const ProductCard: React.FC<IProps> = ({ product }) => {
   const [discount, setDiscount] = useState<number>(0);
   const [discountPrice, setDiscountPrice] = useState<number>(product.price);
   const [productImage, setProductImage] = useState<string>('./images/ImagePlaceholder.jpeg');
@@ -28,10 +28,10 @@ const ProductCard : React.FC<IProps> = ({ product }) => {
     <Col xs={24} sm={12} md={8} lg={6} xl={4}>
       <div className={styles['product']}>
         <Link to={`/product/${product.id}`}>
-          <div className={styles['image-container']}>
+          <div className='image-container'>
             <div
-              className={styles['image']}
-              style={{ backgroundImage: `url('${productImage}')`}}
+              className='image'
+              style={{ backgroundImage: `url('${productImage}')` }}
             ></div>
             {/* items on left top */}
             <div className={styles['tag-group']}>
@@ -47,14 +47,14 @@ const ProductCard : React.FC<IProps> = ({ product }) => {
             </div>
             {/* sales on right top */}
             <div className={`${styles['tag-discount']} ${!discount && styles['hidden']}`}>
-                <span>{discount}</span>
-                <span>折</span>
+              <span>{discount}</span>
+              <span>折</span>
             </div>
           </div>
 
           <div className={styles['product-content']}>
             <div className={styles['product-description']}>
-              { product.description }
+              {product.description}
             </div>
             <div className={styles['product-extras']}>
               <div className={styles['product-price']}>${discountPrice}</div>

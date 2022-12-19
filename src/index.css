@@ -27,7 +27,7 @@
 }
 
 .hero {
-  margin-top: 30px;
+  margin-top: 16px;
 }
 
 .image-container {
@@ -35,6 +35,12 @@
   width: 100%;
   display: block;
   /* overflow: hidden; */
+}
+
+.image-container.round {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .image-container::after {
