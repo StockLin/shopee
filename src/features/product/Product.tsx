@@ -9,6 +9,8 @@ import ProductImagePreviewer from "../../commons/components/product/ProductImage
 import Tag from "../../commons/components/Tag/Tag";
 import Button from "../../commons/components/Button/Button";
 import ProductManufacturerCard from "../../commons/components/product/ProductManufacturerCard/ProductManufacturerCard";
+import { IComment } from "../../commons/components/comments/Comment/Comment";
+import CommentList from "../../commons/components/comments/CommentList/CommentList";
 
 const initialImageUrls = [
   "https://cf.shopee.tw/file/2443267b4da34a1090811f96e3c6465e_tn",
@@ -27,9 +29,21 @@ const Product: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<IProduct | null>(null);
   const [quantity, setQuantity] = useState<number>(1);
+  const [comments, setComments] = useState<IComment[]>([]);
 
   useEffect(() => {
     // fetch product detail by id
+
+    // fetch comment
+    const mockComments: IComment[] = Array.from(Array(5).keys()).map((_, idx) => ({
+      id: idx,
+      avatar: 'https://joeschmoe.io/api/v1/random',
+      content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur odit molestias eligendi natus aliquam laudantium asperiores pariatur. Necessitatibus, minus repudiandae.',
+      createdBy: `tester-${idx}`,
+      createdAt: '2022-12-23'
+    }));
+
+    setComments(mockComments)
   }, [id]);
 
   return (
@@ -178,7 +192,12 @@ const Product: React.FC = () => {
         <div className={styles["product-extras"]}></div>
 
         {/* comment */}
-        <div className={styles["product-comment"]}></div>
+        <div className="hero">
+          <div className={styles["product-comment"]}>
+            <h3>商品評價</h3>
+            <CommentList comments={comments} />
+          </div>
+        </div>
       </div>
     </DefaultLayout >
   );

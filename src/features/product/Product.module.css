@@ -139,9 +139,9 @@
   }
 }
 
-.product-subcontent {
-  /* border: 1px solid #333; */
-}
+/* .product-subcontent {
+  border: 1px solid #333;
+} */
 
 .product-subcontent-item {
   margin-bottom: 16px;
@@ -291,3 +291,13 @@
   }
 }
 
+.product-comment {
+  background-color: #fff;
+  /* padding: 16px; */
+}
+
+.product-comment h3 {
+  /* border: 1px solid red; */
+  padding: 16px 24px;
+  padding-bottom: 0;
+}
