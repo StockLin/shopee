@@ -164,7 +164,7 @@ const Product: React.FC = () => {
                     <div className={`${styles["content"]}`}>
                       <div className={styles['qty-input']}>
                         <button onClick={() => setQuantity((quantity - 1) > 0 ? (quantity - 1) : 1)}><MinusOutlined /></button>
-                        <input name='quantity' type="text" defaultValue={quantity} value={quantity} />
+                        <input name='quantity' type="text" onChange={() => { }} value={quantity} />
                         <button onClick={() => setQuantity((quantity + 1))}><PlusOutlined /></button>
                       </div>
                       還剩186037件
