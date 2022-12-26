@@ -1,0 +1,27 @@
+.item-card {
+  border: .5px solid rgba(0, 0, 0, 0.1);
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  padding: 4px;
+
+  transition: all .3s;
+}
+
+.item-card:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item-card .item-card__image {
+  width: 5rem;
+  height: 5rem;
+}
+
+.item-card .item-card__name {
+  font-size: var(--md-font-size);
+  color: #333;
+}

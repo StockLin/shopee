@@ -1,15 +1,25 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Normalize } from 'styled-normalize';
+import 'antd/dist/antd.min.css';
+import { Counter } from './features/counter/Counter';
+import Home from './features/home/Home';
+import Login from './features/login/Login';
+import Product from './features/product/Product';
 
-function App() {
+const  App : React.FC = () => {
   return (
-    <React.Fragment>
-      <Normalize />
-      <div className="App">
-        hello
-      </div>
-    </React.Fragment>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/account/register' element={<div>Register Page</div>} />
+          <Route path='/account/login' element={<Login />} />
+
+
+          <Route path='/product/:id' element={<Product />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

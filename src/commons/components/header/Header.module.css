@@ -1,0 +1,130 @@
+/* @import '../../../index.css'; */
+
+.btn-search-bar {
+  background-color: var(--primary-color) !important;
+}
+
+.header {
+  /* border: 1px solid #000; */
+  width: 100%;
+  max-height: 128px;
+  background: linear-gradient(-180deg, #ee4d2d, #ff7337)
+}
+
+.header.fixed {
+  position: fixed;
+}
+
+.navbar {
+  /* border: 1px solid #000; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: var(--md-font-size);
+}
+
+.nav {
+  /* border: 1px solid 000; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 4px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.nav-item:hover {
+  opacity: 0.8;
+}
+
+.nav.right .nav-item {
+  margin-right: 8px;
+}
+
+.nav-item--icons_group {
+  font-size: 18px;
+}
+
+.nav-item--icons_group i {
+  margin-right: 8px;
+  transition: all .3s;
+}
+
+.nav-item--icons_group i:hover {
+  opacity: 0.8;
+}
+
+.translate-popover.ant-popover-inner-content {
+  padding: 0;
+}
+
+.translate {
+  display: block;
+
+  margin: 0;
+}
+
+.translate-item {
+  transition: all 0.3s;
+}
+
+.translate-item:hover {
+  color: var(--primary-color);
+}
+
+
+/* navbar-with-search */
+.navbar-with-search {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.navbar-with-search .logo {
+  /* border: 1px solid #000; */
+  flex: 1;
+  width: 163px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 4px;
+  margin-right: 40px;
+}
+
+.navbar-with-search .search-content {
+  /* border: 1px solid #000; */
+  flex: 8;
+  padding: 4px;
+}
+
+.search-content .seach-bar input {
+  font-size: 14px;
+}
+
+.navbar-with-search .cart {
+  /* border: 1px solid #000; */
+  flex: 1;
+  padding: 4px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.search-keyword-items {
+  margin-top: 8px;
+}
+
+.search-keyword-items .keyword-item {
+  display: inline-block;
+  color: #fff;
+  padding: 4px;
+  font-size: var(--sm-font-size);
+}
